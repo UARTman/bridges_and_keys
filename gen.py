@@ -15,10 +15,7 @@ def dist(a, b = [0, 0]):
     return ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** 0.5
 
 def is_in(a, b):
-    for el in a:
-        if el not in b:
-            return False
-    return True
+    return set(a).issubset(b)
 
 def save_lab(FName):
     file = open(FName, 'w')
